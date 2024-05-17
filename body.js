@@ -13,15 +13,33 @@ const curDate = document.getElementById("date");
             weekday[6] = "Friday";
             weekday[7] = "Saturday";
 
-            let currentTime = new Date();
+            let getcurrentTime = new Date();
             console.log(weekday[currentTime.getday()]);
         }
 
         const getCurrentTime = () => {
+            var months = [
+                "Jan",
+                "Feb",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "Sept",
+                "Oct",
+                "Nov",
+                "Dec"
+            ];
+        
             var now = new Date();
-            var month = now.getMonth() + 1;
-            var day = now.getDate();
+            var month = months[now.getMonth() + 1];
+            var date = now.getDate();
             var year = now.getFullYear();
+
+            let hours = now.getHours();
+            let mins = now.getMinutes();
 
             console.log(month + "/" + day + "/" + year);
         };
