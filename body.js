@@ -53,4 +53,4 @@ const curDate = document.getElementById("date");
             }
             return `${month} ${date} | ${hours}:${mins}${periods}`;
         };
-            curDate.innerHTML = getCurrentDay() + "|" + getCurrentTime();
+            curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
