@@ -14,7 +14,8 @@ const curDate = document.getElementById("date");
             weekday[7] = "Saturday";
 
             let getcurrentTime = new Date();
-            console.log(weekday[currentTime.getday()]);
+            let day = weekday[currentTime.getday()];
+            return day;
         }
 
         const getCurrentTime = () => {
@@ -41,6 +42,15 @@ const curDate = document.getElementById("date");
             let hours = now.getHours();
             let mins = now.getMinutes();
 
-            console.log(month + "/" + day + "/" + year);
+            let periods = "AM";
+
+            if (hours > 11) {
+                periods = "PM";
+                if (hours > 12) hours -= 12;
+            }
+            if (mins < 10) {
+                mins = "0" + mins;
+            }
+            return `${month} ${date} | ${hours}:${mins}${periods}`;
         };
-        getcurrentTime();
+            curDate.innerHTML = getCurrentDay() + "|" + getCurrentTime();
