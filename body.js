@@ -1,7 +1,7 @@
 const curDate = document.getElementById("date");
         let weathercon = document.getElementById("weathercon");
 
-        const tempStatus = "Coluds";
+        const tempStatus = "{%tempstatus%}";
 
         const getCurrentDay = () => {
             var weekday = new Array(7);
